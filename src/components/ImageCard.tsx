@@ -47,10 +47,17 @@ export const ImageCard = ({ image }: ImageCardProps) => {
             className="group relative bg-slate-900 rounded-xl overflow-hidden border border-slate-800 cursor-pointer"
             onClick={() => setSelectedImage(image)}
         >
-            <div className="aspect-[4/5] overflow-hidden">
-                <img
+            <div className="aspect-[4/5] overflow-hidden bg-slate-800 animate-pulse">
+                <motion.img
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
                     src={image.urls.small}
                     alt={image.alt_description}
+                    onLoad={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.parentElement?.classList.remove('animate-pulse');
+                    }}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
             </div>
