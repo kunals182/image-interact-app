@@ -2,8 +2,6 @@
 
 A premium, high-performance web application built for seamless real-time image engagement. This project was developed for the **FotoOwl** technical assessment, focusing on real-time synchronization, architectural clarity, and exceptional UX.
 
-## 🚀 Live Demo
-- **GitHub Repository**: https://github.com/kunals182/image-interact-app.git
 
 ## 🌟 Core Features
 
